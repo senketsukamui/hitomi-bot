@@ -1,0 +1,26 @@
+{
+  "name": "hitomibot",
+  "description": "Discord bot that parses Danbooru",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "request": "2.81.0",
+    "dotenv": "8.2.0",
+    "danbooru": "3.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senketsukamui/hitomi-bot.git"
+  },
+  "author": "Senketsu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/senketsukamui/hitomi-bot/issues"
+  },
+  "homepage": "https://github.com/senketsukamui/hitomi-bot#readme"
+}
