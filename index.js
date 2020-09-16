@@ -1,6 +1,4 @@
-require("dotenv").config();
-
-const token = process.env.DB_TOKEN;
+const token = process.env.BOT_TOKEN;
 
 const Discord = require("discord.js");
 
