@@ -32,6 +32,7 @@ const sendPost = (tagsString) => {
       channel.send(img.tag_string_character, attachment);
     })
     .catch((error) => {
+      const channel = client.channels.get(channelId);
       channel.send("Что-то пошло не так");
     });
 };
