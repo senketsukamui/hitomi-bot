@@ -27,8 +27,8 @@ const sendPost = (tagsString) => {
     .posts({ tags: tagsString, limit: 1, random: true })
     .then((posts) => {
       const img = posts[0];
-      const channel = client.channels.cache.get(channelId);
-      const attachment = new Discord.MessageAttachment(img.large_file_url);
+      const channel = client.channels.get(channelId);
+      const attachment = new Discord.Attachment(img.large_file_url);
       channel.send(img.tag_string_character, attachment);
     })
     .catch((error) => {
@@ -55,4 +55,4 @@ client.on("message", (msg) => {
   }
 });
 
-client.login(token);
+client.login("NzU1NTA4MjMyOTk4NjE3MDg4.X2ET3w.-LE8pQYq7lO2oRsHx9pQ5yx_Bl8");
