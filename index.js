@@ -32,7 +32,7 @@ const sendPost = (tagsString) => {
       channel.send(img.tag_string_character, attachment);
     })
     .catch((error) => {
-      console.log(error);
+      channel.send("Что-то пошло не так");
     });
 };
 
