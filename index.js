@@ -19,8 +19,11 @@ const sendPost = (tagsString, channel) => {
     .posts({ tags: tagsString, limit: 1, random: true })
     .then((posts) => {
       const img = posts[0];
-      const attachment = new Discord.Attachment(img.large_file_url);
-      channel.send(img.tag_string_character, attachment);
+      const artEmbed = new Discord.RichEmbed()
+        .setTitle(`Fandom: ${img.tag_string_copyright}`)
+        .setImage(img.large_file_url)
+        .setDescription(`Characters: ${img.tag_string_character}`);
+      channel.send(artEmbed);
     })
     .catch((error) => {
       console.log(error);
